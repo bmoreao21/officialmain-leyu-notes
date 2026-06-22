@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cntv-football.com · 足球直播</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf8;
+      color: #1e1e1e;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.8rem 1.2rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-top: 0.4rem;
+      margin-bottom: 0.2rem;
+      color: #0b0b0b;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      font-weight: 380;
+      color: #5a5a58;
+      margin-bottom: 2.4rem;
+      border-left: 3px solid #347a4e;
+      padding-left: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 480;
+      letter-spacing: -0.01em;
+      margin-top: 3.2rem;
+      margin-bottom: 0.8rem;
+      color: #20201e;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 470;
+      margin-top: 1.6rem;
+      margin-bottom: 0.4rem;
+      color: #2d2d2b;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2b2b29;
+    }
+
+    .hero-summary {
+      background: #f2f2ee;
+      padding: 1.6rem 1.8rem;
+      border-radius: 20px;
+      margin: 1.2rem 0 2rem 0;
+    }
+
+    .hero-summary p {
+      margin-bottom: 0.6rem;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.8rem 0;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #ffffff;
+      border: 1px solid #e3e3df;
+      border-radius: 18px;
+      padding: 1.2rem 1.2rem 1.4rem 1.2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 530;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: #1c4d2e;
+    }
+
+    .feature-item p {
+      margin-bottom: 0;
+      font-size: 0.96rem;
+    }
+
+    .scenario-box {
+      background: #ffffff;
+      border: 1px solid #deded9;
+      border-radius: 20px;
+      padding: 1.4rem 1.6rem;
+      margin: 2.2rem 0;
+    }
+
+    .scenario-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eaeae5;
+      padding: 1rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+      color: #1c1c1a;
+    }
+
+    .faq-a {
+      color: #3f3f3c;
+      font-size: 0.96rem;
+    }
+
+    .access-note {
+      background: #edede9;
+      border-radius: 30px;
+      padding: 1.2rem 1.6rem;
+      margin-top: 2.8rem;
+      font-size: 0.95rem;
+      color: #2f2f2c;
+    }
+
+    .access-note a {
+      color: #1e5a34;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 450;
+    }
+
+    .access-note a:hover {
+      color: #0d3b21;
+      text-decoration-thickness: 2px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #d6d6d0;
+      margin: 2.8rem 0 1rem;
+      width: 100%;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #7a7a76;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 1.8rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .feature-grid {
+        flex-direction: column;
+      }
+
+      .hero-summary {
+        padding: 1.2rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>cntv-football.com</h1>
+    <div class="subhead">一场球赛 · 一个页面 · 一刻不耽误</div>
+
+    <!-- 简短摘要，快速定位 -->
+    <div class="hero-summary">
+      <p>这个网站只做一件事：告诉你当前可以看哪场足球直播，以及去哪里看。没有论坛、没有比分竞猜、没有会员体系，一个克制到几乎静态的指引页面。适合那种只想快速确认“今晚有没有球”的人。</p>
+      <p>如果你曾在无数个体育平台间来回切换，只为了找一个稳定的直播源，那么这里可能刚好是你需要的起点。</p>
+    </div>
+
+    <!-- 亮点 / 特点卡片式 -->
+    <h2>为什么值得试</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>不存直播流</strong>
+        <p>页面只列出正在进行的比赛与外链，不托管任何视频内容。意味着加载极快，没有广告预加载。</p>
+      </div>
+      <div class="feature-item">
+        <strong>赛程即首页</strong>
+        <p>打开就是当日比赛清单，不分联赛等级，不分主客场权重。五大联赛、欧冠、亚冠、国内赛事一视同仁。</p>
+      </div>
+      <div class="feature-item">
+        <strong>五分钟习惯</strong>
+        <p>不需要注册或关注任何账号。刷新页面，看到比赛，点击跳转，过程不超过十秒。适合赛前快速确认。</p>
+      </div>
+    </div>
+
+    <!-- 使用场景 / 建议 更自然叙述 -->
+    <div class="scenario-box">
+      <h3 style="margin-top: 0;">什么情况下会用到它</h3>
+      <p>周末晚上打开电视，却想不起今晚英超几点开球；午休时同事聊起一场欧冠，你想确认是不是真的有直播；出差在外，手机里没有装任何体育App，但想看看有没有能看的比赛。这些场景下，<strong>足球直播</strong>页面比打开一个完整平台要轻得多。</p>
+      <p>页面不会主动推送通知，也没有个性化推荐。你看到的只是一个按时间排列的直播列表，以及对应的观看渠道。有些源来自官方转播商，有些则是公开的嵌入页面——具体由网站维护者筛选，但始终不会要求你下载任何软件。</p>
+    </div>
+
+    <!-- FAQ 摘要，只取最为常见的 -->
+    <h2>简单说明</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">直播列表会实时更新吗？</div>
+      <div class="faq-a">通常每几分钟同步一次，但遇到开赛时间密集的周末可能会有延迟。如果发现列表与实际情况不符，可以手动刷新页面。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">为什么有些比赛没有链接？</div>
+      <div class="faq-a">部分场次可能没有公开且稳定的直播源，或者版权方限制了境外访问。这种情况下只会显示赛程信息，但不会给出失效链接。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">手机浏览器能正常使用吗？</div>
+      <div class="faq-a">页面本身为响应式设计，手机、平板、电脑布局一致。但部分外部直播源可能对移动端不够友好，建议在电脑上打开。</div>
+    </div>
+
+    <!-- 可信且克制的访问说明——自然嵌入链接 -->
+    <div class="access-note">
+      <p>如果你想直接查看当前可用的比赛，可以前往 <a href="https://cntv-football.com">足球直播</a> 主页。页面不含任何弹窗或自动跳转，加载完成后所有比赛一目了然。网站没有用户系统，也不会收集你的浏览记录——它更像一个安静的公告栏，仅此而已。</p>
+      <p style="margin-bottom: 0; margin-top: 0.6rem;">如果你觉得信息有用，可以把它加入书签。如果你觉得信息不够全，也完全理解，毕竟这个页面只做了一件事。</p>
+    </div>
+
+    <hr>
+    <div class="footer-note">
+      cntv-football.com · 仅提供赛事指引，不存储视频内容
+    </div>
+  </div>
+</body>
+</html>
